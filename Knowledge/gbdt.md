@@ -57,3 +57,10 @@ $$
 15. mean edge count bottom to top
 16. correlation of y-edge with x
 对于模型来说，我们的模型有 26 个 score function，分别是 $F_A,...,F_Z$，那么字母概率即为做完 softmax 之后得到的概率。
+1. 初始化最开始的的某个 label $y_i$ 比方说 $y_5=G$，那么 $Y_A(x_5)=0, Y_B(x_5)=0,...,Y_G(x_5)=0,Y_Z(x_5)=0$
+2. 基于当前的 model 计算 probability distribution, $P_A(x_5)=0.03, P_B(x_5)=0.05, ...,P_G(x_5)=0.3,...P_Z(x_5)=0.05$
+3. 利用 KL-divergence 计算真实概率与我们输出的预测概率之间的差值
+4. 我们的目标就是最小化 KL-divergence 
+5. iteratively 的做 $-g(x_i) = -\frac{\partial L(y_i, F(x_i))}{\partial F(x_i)}, F:=F+\rho -g(x_)$
+6. 当前这个任务则用的是 26 个 gradient $F_A:=F_A+\rho_A h_A,...,F_Z:=F_Z+\rho_Zh_Z$
+这就是 gbdt 的算法过程。
