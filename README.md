@@ -1,6 +1,7 @@
 # DeepLearning
 Paper Lists:
 
++ [BeyondShortSnippets]: [https://arxiv.org/abs/1503.08909.pdf] [video] [classification]
 + [deepfm]: [https://www.ijcai.org/proceedings/2017/0239.pdf] [recommendation system]
 + [deepvideo]: [https://cs.stanford.edu/people/karpathy/deepvideo/deepvideo_cvpr2014.pdf] [video] []
 + [deformable detr]: [https://arxiv.org/abs/2010.04159] [object detection] [transformer]
