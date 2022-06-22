@@ -2,6 +2,7 @@
 Paper Lists:
 
 + [BeyondShortSnippets]: [https://arxiv.org/abs/1503.08909.pdf] [video] [classification]
++ [ConvolutionalFusion]: [https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Feichtenhofer_Convolutional_Two-Stream_Network_CVPR_2016_paper.pdf] [video] [classoification]
 + [deepfm]: [https://www.ijcai.org/proceedings/2017/0239.pdf] [recommendation system]
 + [deepvideo]: [https://cs.stanford.edu/people/karpathy/deepvideo/deepvideo_cvpr2014.pdf] [video] []
 + [deformable detr]: [https://arxiv.org/abs/2010.04159] [object detection] [transformer]
