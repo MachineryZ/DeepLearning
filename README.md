@@ -20,5 +20,6 @@ Paper Lists:
 + [PointNet++]: [https://arxiv.org/abs/1706.02413.pdf] [3d vision] [classification] [segmentation]
 + [r2+1d]: [https://arxiv.org/pdf/1711.11248v3.pdf] [video] 
 + [rcnn]: [object detection]
++ [SlowFast]: [https://arxiv.org/abs/1812.03982.pdf] [video] [classification]
 + [tsn]: [https://arxiv.org/abs/1608.00859.pdf] [video] [classification]
 + [TwoStream]: [https://arxiv.org/abs/1406.2199.pdf] [video] [optical flow]
