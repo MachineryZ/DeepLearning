@@ -17,7 +17,7 @@
 3. 输入的维度在表格右边有显示，可以说是非常详细了。
 4. 时间维度上，spatial 的 channel 数，本来就不多，尽量不下采样，fast 分支也是。
 
-<div align=center><img src="../Files/slowfast3.jpeg" width=70%></div>
+<div align=center><img src="../Files/slowfast3.jpeg" width=90%></div>
 
 
 结果看：
