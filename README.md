@@ -23,3 +23,4 @@ Paper Lists:
 + [SlowFast]: [https://arxiv.org/abs/1812.03982.pdf] [video] [classification]
 + [tsn]: [https://arxiv.org/abs/1608.00859.pdf] [video] [classification]
 + [TwoStream]: [https://arxiv.org/abs/1406.2199.pdf] [video] [optical flow]
++ [vae]: [https://arxiv.org/pdf/1312.6114.pdf] [vae]
