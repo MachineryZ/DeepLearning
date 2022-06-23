@@ -3,10 +3,12 @@ Paper Lists:
 
 + [BetaVAE]: [https://openreview.net/pdf?id=Sy2fzU9gl] [vae]
 + [BeyondShortSnippets]: [https://arxiv.org/abs/1503.08909.pdf] [video] [classification]
+- [c3d]: [https://arxiv.org/pdf/1412.0767.pdf] [video] [classification]
++ [ComprehensiveVideoReview]: [https://arxiv.org/pdf/2012.06567.pdf] [video] [review]
 + [ConvolutionalFusion]: [https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Feichtenhofer_Convolutional_Two-Stream_Network_CVPR_2016_paper.pdf] [video] [classoification]
 + [DeepCross]: [https://arxiv.org/abs/1708.05123.pdf] [recommendation system]
 + [deepfm]: [https://www.ijcai.org/proceedings/2017/0239.pdf] [recommendation system]
-+ [deepvideo]: [https://cs.stanford.edu/people/karpathy/deepvideo/deepvideo_cvpr2014.pdf] [video] []
++ [deepvideo]: [https://cs.stanford.edu/people/karpathy/deepvideo/deepvideo_cvpr2014.pdf] [video]
 + [deformable detr]: [https://arxiv.org/abs/2010.04159] [object detection] [transformer]
 + [detr]: [https://arxiv.org/pdf/2005.12872v3.pdf] [object detection] [transformer]
 + [FaceShifter]: [https://arxiv.org/pdf/1912.13457.pdf] [face generator] [gan] [unet]
