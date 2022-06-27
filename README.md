@@ -6,6 +6,7 @@ Paper Lists:
 
 + [BetaVAE]: [https://openreview.net/pdf?id=Sy2fzU9gl] [vae]
 + [BeyondShortSnippets]: [https://arxiv.org/abs/1503.08909.pdf] [video] [classification]
++ [BiPointNet]: [https://arxiv.org/pdf/2010.05501.pdf] [3d vision]
 - [c3d]: [https://arxiv.org/pdf/1412.0767.pdf] [video] [classification]
 + [ComprehensiveVideoReview]: [https://arxiv.org/pdf/2012.06567.pdf] [video] [review]
 + [ConvolutionalFusion]: [https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Feichtenhofer_Convolutional_Two-Stream_Network_CVPR_2016_paper.pdf] [video] [classoification]
