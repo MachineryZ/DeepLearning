@@ -61,5 +61,5 @@ $$
 
 <div align=center><img src="../Files/voxelnet4.jpeg" width=60%></div>
 
-这就是
+这就是 voxelnet 的全部流程了。整个流程就是为了往 2d object detection 的方法上靠，然后引入了 voxel 的概念，引入 voxel 之后，为了减少资源消耗使用了资源消耗，引入了稀疏表示，然后针对 2d 的 bbox loss function 增广到 3d 的 bbox loss function，其他的流程和 pointnet 非常相似
 
