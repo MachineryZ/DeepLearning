@@ -8,7 +8,7 @@
 3. 高表达能力： 特征交叉模块有足够大的参数容量来捕获各种可能的特征交叉 [×]
 
 
-<div align=center><img src="../Files/dcn1.jpeg" width=50%></div>
+<div align=center><img src="../Files/dcn1.jpeg" width=80%></div>
 
 FM 提出了一个二次项的特征交互模型。利用向量 $v_i$ 来代表 $x_i$ 来和其他的特征交互。但是涉及到更高的维度，怎么来设计这个交叉项 $x_1^{\alpha_1} x_2^{\alpha_2}...x_d^{\alpha_d}$ 的系数呢？
 

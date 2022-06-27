@@ -10,6 +10,7 @@ Paper Lists:
 + [ComprehensiveVideoReview]: [https://arxiv.org/pdf/2012.06567.pdf] [video] [review]
 + [ConvolutionalFusion]: [https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Feichtenhofer_Convolutional_Two-Stream_Network_CVPR_2016_paper.pdf] [video] [classoification]
 + [dcn]: [https://arxiv.org/abs/1708.05123.pdf] [recommendation system]
++ [dcn_v2]: [https://arxiv.org/pdf/2008.13535.pdf] [recommendation system]
 + [deepfm]: [https://www.ijcai.org/proceedings/2017/0239.pdf] [recommendation system]
 + [deepvideo]: [https://cs.stanford.edu/people/karpathy/deepvideo/deepvideo_cvpr2014.pdf] [video]
 + [deformable detr]: [https://arxiv.org/abs/2010.04159] [object detection] [transformer]
