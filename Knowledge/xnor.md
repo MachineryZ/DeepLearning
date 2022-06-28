@@ -17,6 +17,7 @@ https://allenai.org/plato/xnornet
 - Binary-weights，所有网络卷积层参数为 binary 形式
 - XNOR-Networks，所有网络卷积层参数 和 网络输入 都为 binary 形式
 
+## Binary Weight Networks
 
 - Binary-Weight-Networks
     - 用一个 binary 的 conv filter 再加上一个 scaler 参数 $\alpha$ 来近似原始的卷积核，$\oplus$ 是纯卷积，没有任何加操作。 
@@ -58,10 +59,37 @@ $$
 Htanh(x) = Clip(x, -1,1) = \max(-1,\min(1,x))
 $$
 
+有了导数定义之后，我们就可以进行 bp 来更新每个 layer 的参数了。
+- 第四行是获取每层的 scaler
+- 第五行是获取每层的 binary kernel
+- 第六行是获取蒙层最终 binary kernel 的结果
+- 第七行是根据当前的 binarize 之后的计算出我们的输出 Y
+- 第八行是用标准的 bp 算法，但是用 binary 的 weight 来计算的 gradient
+- 第九行是用 sgd 或者 adam 来更新 binary 的 weight
+- 第十行是更新 learning rate
+<div align=center><img src="../Files/xnor3.jpeg" width=90%></div>
+
+## XNOR Networks
+
+在之前的 binary weight network 的工作中，作者仅仅把 convolutional weight 改成了二值化。在 XNOR 网络中，作者将输入也二值化。假设我们的两个输入原始是 $X, W \in \mathcal {R}^n$ 使得 $X^TW\approx \beta H^T \alpha B$，其中 $H,B\in\{+1,-1\}^n$ 以及 $\alpha,\beta$ 都是正实数，那么我们要求解的优化问题就是：
+$$
+\alpha^*, B^*,\beta^*, H^* = \argmin_{\alpha,B,\beta, H}||X\odot W-\beta\alpha H\odot B||
+$$
+其中 $\odot$ 是 element-wise 的乘法。那么如果把真实的输出写成 $Y_i = X_iW_i$，以及 $C_i=H_iB_i$，$\gamma = \beta\alpha$ 那么上述优化问题可以转化为：
+
+$$
+\gamma^*, C^* = \argmin_{\gamma, C}||Y- \gamma C||
+$$
+同理可得 optimal solution 应该是：
+$$
+H^* = sign(X) \\
+N^* = sign(W) \\
+\gamma^* = \beta^*\alpha^*
+$$
 
 <div align=center><img src="../Files/xnor2.jpeg" width=90%></div>
 
-
+接下来就是 figure 2 里具体的网络流程。在具体实现的时候，为了减少冗余计算，实际上会进行一些计算上的变形。xnor 和 bwn 在本质上加速的原因其实就是将矩阵乘法变成一个 1 位的 xnor 门操作，这就是加速的核心点。
 
 
 
