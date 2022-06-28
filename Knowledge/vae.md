@@ -15,3 +15,5 @@ Auto-Encoding Variantional Bayes
 1. $D_{KL}(q_\phi(z|x)||p_\theta(z|x))=-\sum_z q_\phi (z|x)[\log(\frac{p_\theta(x,z)}{q_\phi(z|x)}-\log(p_\theta(x)))]$
 2. $\log(p_\theta(x))=D_{KL}(q_\phi(z|x)||p_\theta(z|x))+L(\theta,\phi; x)$（variation lower bound）
 
+
+通俗的解释就是：像 autoencoder 类的模型，在 hidden space 空间里，都是离散的点，来进行映射（因为数据有限，所以只能覆盖空间中有限点）那么，为了覆盖整个空间，我们会加上噪声，但是噪声范围又有限，所以加上了无限范围的高斯噪声。
