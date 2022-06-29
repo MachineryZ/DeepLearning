@@ -23,6 +23,7 @@ Paper Lists:
 + [non local]: [https://arxiv.org/pdf/1711.07971.pdf] [video] [segmentation]
 + [PointNet]: [https://arxiv.org/pdf/1612.00593.pdf] [3d vision] [classification] [segmentation]
 + [PointNet++]: [https://arxiv.org/abs/1706.02413.pdf] [3d vision] [classification] [segmentation]
++ [Query2Label]: [https://arxiv.org/pdf/2107.10834v1.pdf] [classification] [multi-label]
 + [r2+1d]: [https://arxiv.org/pdf/1711.11248v3.pdf] [video] 
 + [rcnn]: [object detection]
 + [segmenter]: [https://arxiv.org/abs/2105.05633.pdf] [segmentation]
