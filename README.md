@@ -11,6 +11,7 @@ Paper Lists:
 + [ComprehensiveVideoReview]: [https://arxiv.org/pdf/2012.06567.pdf] [video] [review]
 + [ConvolutionalFusion]: [https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Feichtenhofer_Convolutional_Two-Stream_Network_CVPR_2016_paper.pdf] [video] [classoification]
 + [danet]: [https://openaccess.thecvf.com/content_ICCV_2019/papers/Xue_DANet_Divergent_Activation_for_Weakly_Supervised_Object_Localization_ICCV_2019_paper.pdf] [weakly supervised] [object localization] [segmentation] 
++ [danet]: [https://arxiv.org/abs/1809.02983.pdf] [segmentation]
 + [dcn]: [https://arxiv.org/abs/1708.05123.pdf] [recommendation system]
 + [dcn_v2]: [https://arxiv.org/pdf/2008.13535.pdf] [recommendation system]
 + [deepfm]: [https://www.ijcai.org/proceedings/2017/0239.pdf] [recommendation system]
