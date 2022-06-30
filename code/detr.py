@@ -34,6 +34,7 @@ class DETR(nn.Module):
         print(f"query_pos.unsqueeze(1).shape = {self.query_pos.unsqueeze(1).shape}")
         return self.linear_class(h), self.linear_bbox(h).sigmoid()
 
+
 detr = DETR(num_classes=91, hidden_dim=256, nheads=8, num_encoder_layers=6, num_decoder_layers=6)
 detr.eval()
 inputs = torch.randn(10, 3, 800, 1200)
