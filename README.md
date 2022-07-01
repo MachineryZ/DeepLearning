@@ -36,6 +36,7 @@ Paper Lists:
 + [setr]: [https://arxiv.org/abs/2012.15840] [segmentation]
 + [SlowFast]: [https://arxiv.org/abs/1812.03982.pdf] [video] [classification]
 + [svm] [machine learning]
++ [tablebank] [https://arxiv.org/abs/1903.01949] [table]
 + [TableFormer] [https://arxiv.org/pdf/2203.01017.pdf] [table]
 + [timesformer]: [https://arxiv.org/abs/2102.05095v4] [video] [classification]
 + [tsn]: [https://arxiv.org/abs/1608.00859.pdf] [video] [classification]

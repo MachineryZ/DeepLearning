@@ -39,6 +39,30 @@ $$
 
 本文贡献：
 1. 提出了 TableFormer，一种基于 transformer 的能够预测 树结构、bbox 的 end-to-end 的方法
-2. 
+2. 在各种 table benchmark dataset 里，tableformer 在表现和性能上都远远领先
+3. 构建了 synthtabnet 数据集，其中含有更多样式识别难度更大的 table 数据
+
+<div align=center><img src="../Files/tableformer2.jpeg" width=90%></div>
+
+整个 paper 的框架流程和细节在 figure 3 和 figure 4 里有
+
+1. 将图片输入到 cnn backbone 中，得到定长 feature
+2. feature 加入 position encoding 输入到 2层的 transformer encoder layer
+3. encoder 的 output 会同时被送到两个 decoder net 里面：structure decoder 和 cell bbox decoder
+4. structure decoder
+    1. 在训练的时候，接收到的两个输入分别是 encoder 的1 output 和1 tokenized 的 ground truth tags
+    2. 
+5. cell bbox decoder
+    1. 受到了 detr 的启发
+    2. 依然用 object query 来做为 decoder 的输入，这里的 html 语句里一些重要的部分，比如 $<td>$ 和 '<' 这种能表示 html 结构的信号就作为 object query 部分了
+    3. 最后对 bbox 分类时，类别会加上“空”
+
+<div align=center><img src="../Files/tableformer3.jpeg" width=90%></div>
+
+
+读完这篇 paper，感觉和所能想到的能用的办法，没有什么太大的出入。可能，最大的1创新点在于，如何将 html 语言与预测结构做一个结合。还有就是如何得到 bbox 之后，如何将 bbox 的关系，用 tree model 链接起来。
+
+
+
 
 
