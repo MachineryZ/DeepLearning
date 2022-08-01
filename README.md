@@ -43,4 +43,5 @@ Paper Lists:
 + [tsn]: [https://arxiv.org/abs/1608.00859.pdf] [video] [classification]
 + [TwoStream]: [https://arxiv.org/abs/1406.2199.pdf] [video] [optical flow]
 + [vae]: [https://arxiv.org/pdf/1312.6114.pdf] [vae]
++ [vilt]: [https://arxiv.org/pdf/2102.03334.pdf] [multimodel]
 + [xnor]: [https://arxiv.org/abs/1603.05279.pdf] [model compression]
