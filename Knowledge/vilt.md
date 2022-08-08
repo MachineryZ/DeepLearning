@@ -92,3 +92,12 @@ cv 领域里，如果引入目标检测模块的方法，在整个 infer 阶段�
 9. loss function 是：image text matching loss，masked language modeling loss
 10. image text matching loss 还有一个小的 word patch alignment loss
 
+Optimal Transfer:
+1. 文本输出和图像输出当作概率分布，那么计算了一下距离
+2. 希望距离越小越好
+
+文本目标函数：
+1. 常用的完形填空，mask 单词，看是否能重建这个输出
+2. Vlbit （加入了视觉的无监督的 loss）
+
+
