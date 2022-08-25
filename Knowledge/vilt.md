@@ -56,7 +56,6 @@ cv 领域里，如果引入目标检测模块的方法，在整个 infer 阶段�
 2. clip，特点是 image 和 text 的计算量基本等价，mi 的时候很轻量级，适合抽特征，但是不适合 vqa 这种复杂 tasks
 3. Vilbert UnSter 这种，text 轻量，image 阶段重量级 model，性能不错，但是速度太慢
 4. Vilt，一样使用 fc 做为 feature extractor，然后 mi 阶段使用较大模型（比如 transformer）
-
 之前的方法，如何做模态融合：
 1. 第一类是 single stream
 2. 第二类是 dual stream

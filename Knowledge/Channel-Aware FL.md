@@ -18,7 +18,7 @@ Federate Learning Mechanism
 这里就说一下 federate learning 的常规流程：
 1. global model broadcast：edge server 把当前的模型参数 $w_t$ 广播到所有 device
 2. local gradient calculation：本地梯度计算 $g_k^t=\nabla L_k(w^t)$
-3. importance indicator report：计算每个 device 的 importance，以便于下一步更新梯度的时候有一个权重可以参考
+3. importance indicator report：计算每个 device 的 importance，以便于下一步更新梯度的时候有一个权重可以参考 
 4. device selection and resoource allocation：edge server 会根据上一步的 importance 选取当前的一个 subset device，以及也要考虑 bandwith 带来的影响
 5. local gradient upload：进行梯度的传输
 6. global model update：根据收到的梯度信息，对 global model 进行 bp
