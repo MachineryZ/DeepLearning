@@ -27,6 +27,7 @@ Paper Lists:
 + [FM]: [https://www.csie.ntu.edu.tw/~b97053/paper/Rendle2010FM.pdf] [recommendation system]
 + [fintabnet]: [https://openaccess.thecvf.com/content/WACV2021/papers/Zheng_Global_Table_Extractor_GTE_A_Framework_for_Joint_Table_Identification_WACV_2021_paper.pdf] [table]
 + [gnnexplainer]: [https://arxiv.org/pdf/1903.03894.pdf] [graph]
++ [Hierarchical Poset Decoding]: [https://arxiv.org/pdf/2010.07792.pdf] [semantic parsing]
 + [i3d]: [https://arxiv.org/abs/1705.07750.pdf] [3d vision] [video]
 + [Imperfect IL]: [https://arxiv.org/pdf/2103.05910.pdf] [imitation learning]
 + [non local]: [https://arxiv.org/pdf/1711.07971.pdf] [video] [segmentation]
