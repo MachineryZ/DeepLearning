@@ -7,7 +7,7 @@ Learning nonlinear operators via DeepONet based on the universal approximation t
 ## 算子学习方法
 假设我们有一个算子 $G$，有一个函数是 $u$，那么该函数通过这个算子 $G$ 的到的一个输出函数是 $G(u)$。对于 $G(u)$ 的定义域里面的任一一个点 $y$，我们可以得到一个实数结果 $G(u)(y)$。所以我们的神经网络需要有的输入是两个，分别是 $u$ 和 $y$。这层 nn 本质上要做的事情就是去拟合一个算子 $G$，那么我们会尝试不同的输入函数。
 
-表达一个函数的方法有很多，比如图1中的，用有限多的 sensor 去近似得到函数的输出值。或者，用 spectral expansion，用 image 表达等等。
+表达一个函数的方法有很多，比如图1中的，用有限多的 sensor 去近似得到函数的输出值。或者，用 spectral expansion，用 image 表达等等。这里 sensor 的含义本质上就是一个采样器，
 
 特别的，我们验证了，我们可以设计 nn 使得他们可以现实的表达一些算子，比如 积分、变形、除法微分、拉普拉斯变换，甚至是 pde 的方程等等。nn 强大的拟合能力可以十分准确地预测一个算子的行为，或者去预测一个 dynamic system 的解
 
@@ -26,6 +26,12 @@ fig1 解释
 3. 图三是stack 版本的 deeponet
 4. 图四是unstack 版本的deeponet
 
-
+数据生成
+$$
+\frac{d}{dx}s(x) = g(s(x), u(x), x) \\
+s(a) = s_0
+$$
+其中，
+##
 
 
