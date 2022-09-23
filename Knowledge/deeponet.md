@@ -26,12 +26,20 @@ fig1 解释
 3. 图三是stack 版本的 deeponet
 4. 图四是unstack 版本的deeponet
 
-数据生成
+## 数据生成
+我们考虑一个 ode system
 $$
 \frac{d}{dx}s(x) = g(s(x), u(x), x) \\
 s(a) = s_0
 $$
-其中，
-##
+其中，函数 u 是一个定义在 $[a, b]$ 的连续函数，$G$ 是一个算子
+$$
+G(u)(x) = s_0 + \int_a^x g(G(u)(t), u(t), t) dt
+$$
+然后我们等间距的取 $m+1$ 个点 $x_j = a + j(b-1)/m$，以及定义函数 $u_m(x)$：
+$$
+u_m(x) = u(x_j) + \frac{u(x_{j+1}) - u(x_j)}{x_{j+1} - x_j} (x- x_j), x_j\leq x\leq x_{j+1}
+$$
+相当于是一个分段函数吧，假设函数 $u$ 到函数 $u_m$ 的映射是 $L_m$，
 
 
