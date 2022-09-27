@@ -12,6 +12,7 @@ Paper Lists:
 + [channel-aware fl] [https://arxiv.org/pdf/2004.00490.pdf] [federate learning]w
 + [ComprehensiveVideoReview]: [https://arxiv.org/pdf/2012.06567.pdf] [video] [review]
 + [ConvolutionalFusion]: [https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Feichtenhofer_Convolutional_Two-Stream_Network_CVPR_2016_paper.pdf] [video] [classoification]
++ [cvae]: [https://proceedings.neurips.cc/paper/2015/file/8d55a249e6baa5c06772297520da2051-Paper.pdf] [vae]
 + [danet]: [https://openaccess.thecvf.com/content_ICCV_2019/papers/Xue_DANet_Divergent_Activation_for_Weakly_Supervised_Object_Localization_ICCV_2019_paper.pdf] [weakly supervised] [object localization] [segmentation] 
 + [danet]: [https://arxiv.org/abs/1809.02983.pdf] [segmentation]
 + [dcn]: [https://arxiv.org/abs/1708.05123.pdf] [recommendation system]
