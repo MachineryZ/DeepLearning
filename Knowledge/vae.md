@@ -162,7 +162,7 @@ class VanillaVAE(Base):
             -0.5 * torch.sum(1 + log_var - mu ** 2 - log_var.exp(), dim=1),
             dim=0,
         )
-        loss = recns_loss + kld_weight * kld_loss
+        loss = recons_loss + kld_weight * kld_loss
         return {"loss": loss, "Reconstruction Loss": recons_loss.detach(), "kld": -kld_loss.detach()}
 
     def sample(self, num_samples: int, current_device: int, **kwargs) -> Tensor:
@@ -174,3 +174,10 @@ class VanillaVAE(Base):
     def generate(self, x: Tensor, **kwargs) -> Tensor:
         return self.forward(x)[0]
 ~~~
+
+从代码上理解过程，其实 encode 和 decode 的过程都很简单
+1. 一个 input x 进来会得到 中间 hidden gaussian 的参数 mu 和 logvar
+2. 得到 encoder 和 decode 之后的 还原的 output
+3. loss function 的构成是输出之后的 output 和 input 之间的 l2 loss
+4. mu 和 log_var 对 naive gaussian 的 kl divergence loss
+5. sample 的过程是直接在 naive gaussian 里面进行 sample，然后直接过 decode 来得到这个 output
