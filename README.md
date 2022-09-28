@@ -6,6 +6,7 @@ Paper Lists:
 
 + [BatchFormer]: https://arxiv.org/pdf/2203.01522.pdf] [transformer]
 + [BetaVAE]: [https://openreview.net/pdf?id=Sy2fzU9gl] [vae]
++ [BetaTCVAE]: [https://arxiv.org/pdf/1802.04942.pdf] [vae]
 + [BeyondShortSnippets]: [https://arxiv.org/abs/1503.08909.pdf] [video] [classification]
 + [BiPointNet]: [https://arxiv.org/pdf/2010.05501.pdf] [3d vision]
 + [c3d]: [https://arxiv.org/pdf/1412.0767.pdf] [video] [classification]

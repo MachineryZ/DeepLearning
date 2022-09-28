@@ -164,6 +164,7 @@ class WAE_MMD(BaseVAE):
         return result
 
     def compute_inv_mult_quad(self, x1: Tensor, x2: Tensor, eps: float = 1e-7) -> Tensor:
-        
+        z_dim = x2.size(-1)
+        C = 2 * z_dim * self.z_var
 
 ~~~
