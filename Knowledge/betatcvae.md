@@ -209,3 +209,4 @@ class BetaTCVAE(BaseVAE):
         return self.forward(x)[0]
 ~~~
 
+
