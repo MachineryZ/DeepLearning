@@ -48,6 +48,7 @@ Paper Lists:
 + [rcnn]: [object detection]
 + [rigl]: [https://arxiv.org/pdf/1911.11134.pdf] [pruning]
 + [segmenter]: [https://arxiv.org/abs/2105.05633.pdf] [segmentation]
++ [segNeXt]: [https://arxiv.org/pdf/2209.08575.pdf] [segmentation]
 + [setr]: [https://arxiv.org/abs/2012.15840] [segmentation]
 + [SlowFast]: [https://arxiv.org/abs/1812.03982.pdf] [video] [classification]
 + [svm] [machine learning]
