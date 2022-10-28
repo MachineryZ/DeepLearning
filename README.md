@@ -37,7 +37,7 @@ Paper Lists:
 + [Hierarchical Poset Decoding]: [https://arxiv.org/pdf/2010.07792.pdf] [semantic parsing]
 + [HMGTransformer] [https://www.ijcai.org/Proceedings/2020/640] [transformer] [stock]
 + [i3d]: [https://arxiv.org/abs/1705.07750.pdf] [3d vision] [video]
-+ [Imperfect IL]: [https://arxiv.org/pdf/2103.05910.pdf] [imitation learning]
++ [Imperfect IL]: [https://arxiv.org/pdf/2103.05910.pdf] [reinforcement learning] [imitation learning]
 + [msssimvae]: [https://arxiv.org/pdf/1511.06409.pdf] [vae]
 + [nonlocal]: [https://arxiv.org/pdf/1711.07971.pdf] [video] [segmentation]
 + [PointNet]: [https://arxiv.org/pdf/1612.00593.pdf] [3d vision] [classification] [segmentation]

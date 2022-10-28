@@ -12,7 +12,29 @@ Methodology
     1. Discrete Timesteps, $\{0,1,...,T-1\}$ with respective price $\{p_0, p_1, ..., p_{T-1}\}$
     2. At each timestep, the trader will propose to trade a volume of $q_{t+1} \geq 0$ shares
     3. 这个 trading order 会在 price $p_{t+1}$ 被交易（也是 market price）
-    4. 我们的目标是最大化利润（市场完全流动）
-
+    4. 我们的目标是最大化利润（市场完全流动）: $argmax_{q_1,q_2,...,q_T}\sum_{t=0}^{T-1}(q_{t+1} p_{t+1},s.t.\sum_{t=0}^{T-1}q_{t+1}=Q$
+    5. 平均执行价格 average execution price AEP 是 $\sum_{t=0}^{T-1}q_{t+1}p_{t+1}/Q$
+    6. 也就是说，为了得到更多的利润，我们需要更合理的分配 $q_{t+1}$ 使得平均价格更高
+    7. 
+2. Order Execution as a Markov Decision Process
+    1. State：observed state $s_t$ at the timestep t 是描述整个市场和交易者的信息
+        1. private variable of trader 和 public variable of market
+        2. private variable 包括时间 t 还有 剩余的 inventory $Q - \sum_{i=1}^t q_i$ 可以交易的量
+        3. public variable 是 open，high，low，close，average price 和 transaction volume of each time step
+    2. Action
+        1. 对于某一个时刻 t，$a_t$ 代表着，下一个 t+1 时刻交易的 volume 则是 $q_{t+1} = a_t Q$，action 会被 standardized trading volume
+        2. $\sum_{t=0}^{T-1} a_t = 1.0$
+        3. $a_{T-1} = max\{1 - \sum_{i=0}^{T-2} a_i, \pi(s_{T-1})$
+        4. 但是，我们不希望 $a_t$ 的分布有极端值，所以会让交易尽可能地平滑
+    3. Reward
+        1. Reward 部分分为两个，第一个是 trading profitability，也就是交易收益；第二个是 market impact penalty，也就是市场影响惩罚
+        2. 为了描述 trading profitability，我们会将 positive part of reward 定义为 volume weighted price advantage $\hat R^{+}_t(s_t,a_t) = \frac{q_{t+1}}{Q} (\frac{p_{t+1} - \bar p }{\bar p})=a_t(\frac{p_{t+1} - \bar p }{\bar p})$，其中 $\bar p = \sum_{i=0}^{T-1}p_{i+1}/T$ 是averaged original market price （也就是，每一笔交易当前的收益率的）
+        3. 对于当前交易可能会对市场有所冲击的情况，我们会用 quadratic penalty $\hat R^-_t=-\alpha (a_t)^2$
+        4. 最终的 reward 表达式为 $R_t(s_t, a_t)=\hat R_t^+(s_t,a_t) + \hat R^-_t(s_t, a_t)= (\frac{p_{t+1}}{\bar p}- 1) a_t - \alpha (a_t)^2$
+        5. 最终的 episode reward 则是用 discounted reward形式即可
+3. Policy Distillation
+    1. policy distillation 的本质是从不完全的市场信息中得到最优的交易规则，以及 rl 并不能很好的在噪音市场中获取一个好的策略
+    2. 所以为了保证 sample 的有效性，我们使用 two stage 的 teacher-student policy distillation
+    3. 
 
 
