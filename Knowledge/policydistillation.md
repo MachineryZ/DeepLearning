@@ -35,6 +35,16 @@ Methodology
 3. Policy Distillation
     1. policy distillation 的本质是从不完全的市场信息中得到最优的交易规则，以及 rl 并不能很好的在噪音市场中获取一个好的策略
     2. 所以为了保证 sample 的有效性，我们使用 two stage 的 teacher-student policy distillation
-    3. 
+    3. teacher: 是为了获得 optimal trading policy 的 nn，可以从环境获取完美、无噪音的信息
+    4. student：是为了在有噪音的市场中，高效的学出来一个策略，然后从 teacher 网络与有噪音的市场中互动，distill 出来的网络
+    5. 在有噪音市场中和 optimal trading policy 之间，建立一个联系，就是 policy distillation loss $L_d = -E_t[log Pr(a_t=\bar a_t|\pi_\theta, s_t;\pi_\phi, \bar s_t)]$，这个 loss 看起来就是在两种市场情况下，用不同的策略他们的期望大小是否一样的一个loss
+4. Policy Optimization
+    1. 在优化算法里，我们有如下几个 loss
+    2. $L_p(\theta) = -E_t[\frac{\pi_\theta(a_t|s_t)}{\pi_{\theta_old}(a_t|s_t)}\hat A(s_t, a_t) - \beta KL(\pi\theta_{old}(\cdot|s_t), \pi_\theta(\cdot|s_t))]$，这是最小化 objective function 的loss，
+    3. $L_v(\theta) = E_t[||V_\theta(s_t) - V_t||_2]$  
+    4. $L(\theta) = L_p + \lambda L_v + \mu L_d$
+    
+
+<div align=center><img src="../Files/policydistillation.jpg" width=70%></div>
 
 
