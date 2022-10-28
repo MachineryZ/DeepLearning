@@ -4,6 +4,7 @@ markdown 文件貌似有一些现实问题，clone 到本地之后可以看
 
 Paper Lists:
 
++ [adgat]: https://www.aaai.org/AAAI21Papers/AAAI-5328.ChengR.pdf [gnn] [quant]
 + [BatchFormer]: https://arxiv.org/pdf/2203.01522.pdf] [transformer]
 + [BetaVAE]: [https://openreview.net/pdf?id=Sy2fzU9gl] [vae]
 + [BetaTCVAE]: [https://arxiv.org/pdf/1802.04942.pdf] [vae]
