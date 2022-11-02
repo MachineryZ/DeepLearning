@@ -48,3 +48,6 @@ Methodology
 <div align=center><img src="../Files/policydistillation.jpg" width=70%></div>
 
 
+market impact
+participation rate: pp * volatility(sd) + spread
+理解：spread 变得比较大之后，可以认为市场冲击的比较大。
