@@ -193,7 +193,51 @@ class MSSIM(nn.Module):
         sigma12 = F.conv2d(img1 * img2, window, padding=window_size//2, groups=in_channels) - mu1_mu2
 
         img_range = 1.0
-        
+        C1 = (0.01 * img_range) ** 2
+        C2 = (0.03 * img_range) ** 2
+
+        v1 = 2.0 * sigma12 + C2
+        v2 = sigma_sq + sigma_sq + C2
+        cs = torch.mean(v1 / v2)
+        ssim_map = ((2 * mu1_mu2 + C1) * v1) / ((mu1_sq + mu2_sq + C1) * v2)
+
+        if size_average:
+            ret = ssim_map.mean()
+        else:
+            ret = ssim_map.mean(1).mean(1).mean(1)
+        return ret, cs
+    
+    def forward(self, img1: Tensor, img2: Tensor) -> Tensor:
+        device = img1.device
+        weights = torch.FloatTensor([0.0448, 0.2856, 0.3001, 0.2363, 0.1333]).to(device)
+        levels = weights.size()[0]
+        mssim = []
+        mcs = []
+
+        for _ in range(levels):
+            sim, cs = self.ssim(img1, img2,
+                                self.window_size,
+                                self.in_channels,
+                                self.size_average)
+            mssim.append(sim)
+            mcs.append(cs)
+
+            img1 = F.avg_pool2d(img1, (2, 2))
+            img2 = F.avg_pool2d(img2, (2, 2))
+
+        mssim = torch.stack(mssim)
+        mcs = torch.stack(mcs)
+
+        # # Normalize (to avoid NaNs during training unstable models, not compliant with original definition)
+        # if normalize:
+        #     mssim = (mssim + 1) / 2
+        #     mcs = (mcs + 1) / 2
+
+        pow1 = mcs ** weights
+        pow2 = mssim ** weights
+
+        output = torch.prod(pow1[:-1] * pow2[-1])
+        return 1 - output
 
 
 ~~~
