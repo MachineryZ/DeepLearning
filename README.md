@@ -26,6 +26,8 @@ Paper Lists:
 + [deepvideo]: [https://cs.stanford.edu/people/karpathy/deepvideo/deepvideo_cvpr2014.pdf] [video]
 + [deformable detr]: [https://arxiv.org/abs/2010.04159] [object detection] [transformer]
 + [detr]: [https://arxiv.org/pdf/2005.12872v3.pdf] [object detection] [transformer]
++ [dl_for_crypto_orderbook]: [https://arxiv.org/pdf/2010.01241.pdf] [quant] [orderbook]
++ [dl_for_orderbook]: [https://arxiv.org/pdf/1601.01987.pdf] [quant] [orderbook]
 + [dynamic detr]: [https://openaccess.thecvf.com/content/ICCV2021/papers/Dai_Dynamic_DETR_End-to-End_Object_Detection_With_Dynamic_Attention_ICCV_2021_paper.pdf] [object detection]
 + [efficient detr]: [https://arxiv.org/pdf/2104.01318.pdf] [object detection]
 + [FaceShifter]: [https://arxiv.org/pdf/1912.13457.pdf] [face generator] [gan] [unet]
