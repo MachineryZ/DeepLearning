@@ -25,3 +25,68 @@ $$
 $$
 
 $$
+
+代码部分：https://github.com/younglululu/DeepPINK/blob/master/run_withKnockoff_all.py
+~~~python
+import time
+import math
+import sys
+import os
+
+import numpy as np
+import pandas as pd
+import matplotlib.mlab as mlab
+import matplotlib.pyplot as plt
+from scipy.linalg import qr
+
+import keras
+from keras.models import Sequential, Model, model_from_json
+from keras.layers import Input, Dense, Dropout, BatchNormalization, merge, LocallyConnected1D, Flatten, Conv1D
+from keras import backend as K
+from keras import regularizers
+from keras.objectives import mse
+from keras.callbacks import EarlyStopping
+from keras.initializers import Constant
+
+from sklearn.preprocessing import StandardScaler, LabelEncoder
+from sklearn.metrics import auc, roc_curve, roc_auc_score
+from sklearn.model_selection import GridSearchCV
+
+dataDir = "/media/yanglu/TOSHIBA/data/featuresAndResponseDataframeCSVs/2018_6_15_fiveFoldCSVs
+
+dataTypeList = ["LRnoMotifs"];
+num_epochs = 200
+batch_size = 10
+filterNum = 1
+bias = True
+activation = "relu"
+iterNum = 10
+
+def calc_selectedfeat(origin_vec, knockoff_vec, q_thres):
+    W = np.fabs(origin_vac) - np.fabs(knockoff_vec)
+    print(W.shape)
+    t = np.concatenate(([0], np.sort(np.fabs(W))))
+    ratio = np.zeros(origin_vec)
+    for j in range(origin_vec):
+        ratio[j] = 1.0 * len(np.where(W <= -t[j][0]>) / np.max((1, len(np.where(W >= t[j])[0]))))
+    T = np.inf
+    arr = np.where(ratio <= q_thres)[0]
+    if len(arr) > 0:
+        id = np.min(arr)
+        T = t[id]
+    qualifiedIndices = np.where(np.fabs(W) >= T)[0];
+    return qualifiedIndices
+
+def show_layer_info(layer_name, layer_out):
+    pass
+
+def build_DNN(p, coeff=0):
+    input = Input(name="input", shape=(p, 2))
+    show_layer_info("Input", input)
+
+    local1 = LocallyConnected1D(filterNum, 1, use_bias=bias, kernel_initializer=Constant(value=0.1))(input)
+    local2 = LocallyConnected1D(1, 1, use_bias=bias, kernel_initializer="glorot_normal")(local1)
+    flat = Flatten()(local2)
+    dense1 = Dense(p, activation=activation, use_bias=bias, kernel_initializer="glorot_normal", kernel_regularizer=regularizers.l1(coeff))(flat)
+    
+~~~
