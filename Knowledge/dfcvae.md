@@ -1,5 +1,7 @@
 # DFC VAE
 
+DFC vae 的想啊法就是，引入了一个 feature perceptual loss，式定义为两个图片通过 pretrained deep cnn 得到的 feature 的欧氏距离。feature perceptual loss 的初衷就是，想要找到两个图片之间的深层次的联系。那么，对于本文的 feature extractor 是 vgg16 的情况，则最终的 feature perceptual loss 我们定义为，vgg16 每个卷积核的结果的每个channel的每个pixel的差，求和是最终的 feature perceptual loss
+
 https://github.com/AntixK/PyTorch-VAE/blob/master/models/dfcvae.py
 
 
