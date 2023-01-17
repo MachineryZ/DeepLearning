@@ -1,3 +1,4 @@
+# https://blog.csdn.net/qq_44941689/article/details/127064266
 import math
 from inspect import isfunction
 from functools import partial
