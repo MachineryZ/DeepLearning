@@ -163,6 +163,6 @@ def plot(imgs, with_orig=False, row_title=None, **imshow_kwargs):
             axs[0, 0].title.set_size(8)
         if row_title is not None:
             for row_idx in range(num_rows):
-                
+                continue
 
 
