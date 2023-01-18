@@ -1,4 +1,5 @@
 # https://blog.csdn.net/qq_44941689/article/details/127064266
+# https://blog.csdn.net/Peach_____/article/details/128663957
 import math
 from inspect import isfunction
 from functools import partial
@@ -129,7 +130,29 @@ reverse_transform = Compose([
 def get_noisy_image(x_start, t):
     x_noisy = q_sample(x_start, t=t)
     noisy_image = reverse_transform()
+    return noisy_image
 
+t = torch.tensor([40])
+get_noisy_image(x_start, t)
+
+# pytorch 官方的一个画图函数
+from PIL import Image
+import requests
+
+url = 'http://images.cocodataset.org/val2017/000000039769.jpg'
+image = Image.open(requests.get(url, stream=True).raw)
+image
+
+import matplotlib.pyplot as plt
+torch.manual_seed(0)
+def plot(imgs, with_orig=False, row_title=None, **imshow_kwargs):
+    if not isinstance(imgs[0], list):
+        imgs = [imgs]
+    num_rows = len(imgs)
+    num_cols = len(imgs[0]) + with_orig
+    fig, axs = plt.subplots(figsize=(200, 200), nrows=num_rows, ncols=num_cols, squeeze=False)
+    for row_idx, row in enumerate(imgs):
+        row = [image] + row if with_orig else row
 
 
 
