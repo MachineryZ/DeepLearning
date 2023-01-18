@@ -1,6 +1,7 @@
 # https://blog.csdn.net/qq_44941689/article/details/127064266
 # https://blog.csdn.net/Peach_____/article/details/128663957
 # https://blog.csdn.net/weixin_43850253/article/details/128274577
+# https://yuezhou-oh.github.io/blog/paperreading/Understanding_diffusion_model.html
 import math
 from inspect import isfunction
 from functools import partial
