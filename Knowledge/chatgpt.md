@@ -35,4 +35,4 @@ Chatgpt
 2. 人工操作的 reward：RLHF（Reinforcement Learning from Huma Feedback)
     1. Step1 (collect demonstration data and train a supervised policy)：prompt 会从 prompt dataset 中 sample，人工会给出一些建议，fine-tune gpt-3 with supervised learning
     2. Step2 (collect comparison data and train a reward model): a prompt and several model outputs are sampled, a labeler ranks the outputs from best to worst, this data is used to train our reward model
-    3. Step3 (optimize a policy against the reward model using reinforcement learning) 
+    3. Step3 (optimize a policy against the reward model using reinforcement learning): a new prompt is sampled from the dataset, the policy generates an output, the reward model calculates a reward for the output, the reward is used to update the policy using ppo
