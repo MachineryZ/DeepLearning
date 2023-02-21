@@ -61,6 +61,7 @@ Paper Lists:
 + [TableFormer] [https://arxiv.org/pdf/2203.01017.pdf] [table]
 + [tc_mdp] [https://arxiv.org/pdf/2004.11555.pdf] [mdp]
 + [timesformer]: [https://arxiv.org/abs/2102.05095v4] [video] [classification]
++ [transformer_xl]: [] [nlp] [transformer]
 + [tsn]: [https://arxiv.org/abs/1608.00859.pdf] [video] [classification]
 + [TwoStream]: [https://arxiv.org/abs/1406.2199.pdf] [video] [optical flow]
 + [vae]: [https://arxiv.org/pdf/1312.6114.pdf] [vae]
