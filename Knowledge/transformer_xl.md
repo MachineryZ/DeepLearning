@@ -22,5 +22,23 @@ class PositionalEmbedding(nn.Module):
             return pos_emb[:,None,:]
 
 class MemTransformerLM(nn.Module):
-    def __init__(self, n_tocken, n_layer, n_head, d_model, d_head, d_inner, dropout, dropatt, tie_weight=True, d_embed=None, div_val=1, tie_projs=[False], pre_norm=False, tgt_len=)
+    def __init__(self, n_tocken, n_layer, n_head, d_model, d_head, d_inner, dropout, dropatt, tie_weight=True, d_embed=None, div_val=1, tie_projs=[False], pre_norm=False, tgt_len=):
+        super(MemTransformerLM, self).__init__()
+        self.n_token = n_token
+
+        d_embed = d_model if d_embed is None else d_embed
+        self.d_embed = d_embed
+        self.d_model = d_model
+        self.n_head = n_head
+        self.d_head = d_head
+
+        self.word_emb = AdaptiveEmbedding(n_token, d_embed, d_model, cutoffs, div_val=div_val)
+
+        self.drop = nn.Dropout(dropout)
+        self.n_layer = n_layer
+        self.tgt_len = tgt_len
+        self.ext_len = ext_len
+        self.maxklen = tgt_len + ext_len + mem_len
+        
+
 ~~~

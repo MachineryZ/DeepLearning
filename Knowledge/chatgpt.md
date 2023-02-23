@@ -37,3 +37,4 @@ Chatgpt
     2. Step2 (collect comparison data and train a reward model): a prompt and several model outputs are sampled, a labeler ranks the outputs from best to worst, this data is used to train our reward model
     3. Step3 (optimize a policy against the reward model using reinforcement learning): a new prompt is sampled from the dataset, the policy generates an output, the reward model calculates a reward for the output, the reward is used to update the policy using ppo
 
+
