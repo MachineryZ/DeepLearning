@@ -42,7 +42,7 @@ class RelPartialLearnableDecoderLayer(nn.Module):
 class AdaptiveEmbedding(nn.Module):
     def __init__(self, n_token, d_embed, d_proj, cutoffs, div_val=1, sample_softmax=False):
         super(AdaptiveEmbedding, self).__init__()
-        
+
 
 class MemTransformerLM(nn.Module):
     def __init__(self, n_tocken, n_layer, n_head, d_model, d_head, d_inner, dropout, dropatt, tie_weight=True, d_embed=None, div_val=1, tie_projs=[False], pre_norm=False, tgt_len=):
@@ -70,7 +70,7 @@ class MemTransformerLM(nn.Module):
             for i in range(n_layer):
                 self.layers.append(
                     RelPartialLearnableDecoderLayer(
-
+                        
                     )
                 )
 
