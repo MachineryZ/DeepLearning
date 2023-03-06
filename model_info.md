@@ -45,4 +45,10 @@
     5. Features 问题：如果 19 - 20 进去，还能学到全套，但是现在进去，基本上大的组和流水线差不多；小的组，能学到很多但是能拿到的钱很少。每个组的因子都是互相隔离的。
 4. Optiver
 5. Jump
+    1. Office 情况：
+        1. 在 sh 和 hk 有 office，sh office 大概
+    2. Deep Learning 情况：
+    3. Features 情况：
+    4. 开发情况：
+
 6. 幻方
