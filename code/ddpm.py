@@ -6,7 +6,7 @@ import math
 from inspect import isfunction
 from functools import partial
 
-%matplotlib inline
+# %matplotlib inline
 
 import matplotlib.pyplot as plt
 from tqdm.auto import tqdm
@@ -88,6 +88,8 @@ alphas_cumprod_prev = F.pad(alphas_cumprod[:-1], (1, 0), value=1.0)
 sqrt_recip_alphas = torch.sqrt(1.0 / alphas)
 
 posterior_variance = betas * (1 - alphas_cumprod_prev) / (1. - alphas_cumprod)
+
+# 累乘的一个函数
 def extract(a, t, x_shape):
     batch_size = t.shape[0]
     out = a.gather(-1, t.cpu())
@@ -143,7 +145,7 @@ import requests
 
 url = 'http://images.cocodataset.org/val2017/000000039769.jpg'
 image = Image.open(requests.get(url, stream=True).raw)
-image
+# image
 
 import matplotlib.pyplot as plt
 torch.manual_seed(0)
