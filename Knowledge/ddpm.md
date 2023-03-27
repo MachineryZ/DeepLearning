@@ -3,6 +3,9 @@
 Denoising Diffusion Probabilistic Models
 https://arxiv.org/pdf/2006.11239.pdf
 
+https://zhuanlan.zhihu.com/p/578123804
+
+
 <div align=center><img src="../Files/ddpm.jpg" width=90%></div>
 
 ddpm 代码：
@@ -69,7 +72,7 @@ class SinusoidalPositionEmbedding(nn.Module):
     def __init__(self, dim):
         super(SinusoidalPositionEmbeddings, self).__init__()
         self.dim = dim
-
+  
     def forward(self, time):
         device = time.device
         half_dim = self.dim // 2
