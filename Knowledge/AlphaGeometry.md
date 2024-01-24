@@ -1,4 +1,5 @@
 # AlphaGeometry
+https://www.nature.com/articles/s41586-023-06747-5
 
 大致逻辑和思路
 - alphageometry 模型的目标就是解决用计算机算法解决复杂几何问题（IMO 的几何问题）
