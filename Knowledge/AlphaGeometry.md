@@ -31,6 +31,24 @@ geometry theorem prover baselines
 - 几何问题 solver
     - 第一种是解析几何强行解，解析几何 solver 的方法通常没有逻辑推导，需要的是大量的内存和计算复杂度
     - 第二种是 search/axiomatic methods，这种方法是用若干个定理去推导得到结果
-    - 
 
+synthetic theorems rediscover
+- 一些随机生成的 synthetic theorems 可以发现很多 theorem precises（这一般是得益于做的辅助结构）
+- 虽然这些 synthetic theorem 的证明一般会比 imo 最难的题目还要长 30%
+- 但是 synthetic theorem 并不在目前 discovered theorem set 中，为后续的证明提供了很好的基础
 
+Language model pretraining and fine-tuning
+- pretrain on 100 million synthetic theorem data
+- fine-tuning model 在需要做辅助线的训练集子集里，大概 9%，也就是 9 million
+
+Proving results on IMO-AG-30
+- 就一些结果对比吧，和不同方法的证明准确率对比
+
+Geometry Representation
+- 原话：To sidestep this barrier, we instead adopted a more specialized language used in GEX10, JGEX17, MMP/ Geometer13 and GeoLogic19, a line of work that aims to provide a logi- cal and graphical environment for synthetic geometry theorems with human-like non-degeneracy and topological assumptions
+- gex 这个是一个 paper 中专门用数学符号来构建集合学语言的一个系统，说白了就是采用了一些特定的已经确定好的自然语言系统来表示图形
+
+Sampling consistent theorem premises
+
+Algebraic Reasoning：
+- 把一些角度的表示表示为两个线段和 x-axis 的角度差，然后就可以有解析解的形式
