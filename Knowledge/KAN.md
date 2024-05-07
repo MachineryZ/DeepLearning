@@ -58,7 +58,19 @@ Implementation details
 
 initialization scales 初始化比例
 
-update of spline grid 更新 spline grid：如何更新
+update of spline grid 更新 spline grid，这个 grid 是指 bspline function 的 grid 节点
+
+参数数量，ka representation 的参数量有 $O(N^2L(G+K))$​ 数量级的参数，N 表示每层的 KALayer 宽度（相当于 dimension），L 表示 Layer 数量，G 表示 grid的数量，k 表示 spline order；相比之下，mlp 的参数数量级为 $O(N^2L)$ 是会比 KAN 小，但是 KAN 的层数 L 一般也比 mlp 要浅，所以总体来说参数数量级是差不多的
+
+论文的接下来的部分就是一些数学论证吧，大致的一些结果是：
+
+- neural scaling laws：测试集合的损失 l 会随着网络参数 N 变小 $l\propto N^{-\alpha}$，一般来说，$\alpha$ 的估计公式是 $\alpha = (k+1)/d$，其中 k 是piecewise polynomials 的 order，relu k = 1
+
+grid extension，这里可以认为 grid extension 是一种增加网络表征能力的方法。本质上，mlp 增加表征能力的方法是堆叠 layers 和 增加宽度（base on neural scaling laws）。但是 kan 增加表征能力的方法类似于 fine tuning，他是一开始用较少的 grid 来表达，然后增加 grid 数量
+
+
+
+
 
 ----
 
