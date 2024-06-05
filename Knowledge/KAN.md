@@ -68,7 +68,7 @@ update of spline grid 更新 spline grid，这个 grid 是指 bspline function �
 
 grid extension，这里可以认为 grid extension 是一种增加网络表征能力的方法。本质上，mlp 增加表征能力的方法是堆叠 layers 和 增加宽度（base on neural scaling laws）。但是 kan 增加表征能力的方法类似于 fine tuning，他是一开始用较少的 grid 来表达，然后增加 grid 数量
 
-
+<div align=center><img src="../Files/KAN3.png" width=80%></div>
 
 
 
